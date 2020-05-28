@@ -1,0 +1,25 @@
+{
+	"URLs": [{
+		"url": "http://demo.guru99.com/V4/"
+	}],
+
+	"loginDetails": [{
+		"username": "mngr262954",
+		"password": "YjYqybu"
+	}, {
+		"username": "mngr262954",
+		"password": "xyzabc"
+	}],
+	"CustomerDetails": [{
+		"CustomerName": "John Smith",
+		"Gender": "Male",
+		"DateofBirth": "10-18-1983",
+		"Address": "1235 Ave Parker",
+		"City": "New York",
+		"State": "New York",
+		"PIN": "123456",
+		"MobileNumber": "4539875624",
+		"E-mail": "jsmith@gmail.com",
+		"Password": "Canada01"
+	}]
+}
