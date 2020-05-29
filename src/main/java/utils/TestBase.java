@@ -9,11 +9,11 @@ import java.util.Properties;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.junit.After;
+import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -38,7 +38,7 @@ public class TestBase {
 	}
 	 */
 	
-	@BeforeTest
+	@Before
 	public void setUp() throws IOException {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
@@ -47,7 +47,7 @@ public class TestBase {
 		driver.navigate().to(url);
 	}
 	
-	@AfterTest
+	@After
 	public void endTest() {
 		driver.close();
 	}	
@@ -73,7 +73,7 @@ public class TestBase {
 	public static String dataFile(String fileName, String arrayName,int index,String Key) {
 		try {
 			JSONParser jsonParser = new JSONParser();
-			Object obj = jsonParser.parse(new FileReader(".\\testData\\" + fileName));
+			Object obj = jsonParser.parse(new FileReader("./testData/" + fileName));
 			JSONObject jsonObj = (JSONObject) obj;
 			JSONArray jsonArray = (JSONArray) jsonObj.get(arrayName);
 			JSONObject Obj = (JSONObject) jsonArray.get(index);
