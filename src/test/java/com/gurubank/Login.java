@@ -2,21 +2,24 @@ package com.gurubank;
 
 
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import pageObjects.LoginPage;
-import utils.TestBase;
 
-public class Login extends TestBase{
+
+public class Login extends TestBase{	
 	
-	@Test
-	public void t001_loginToApplication() {		
+	
+	@Test(priority=1)
+	public void t001_loginToApplication() throws InterruptedException {		
 		LoginPage loginPage = new LoginPage(driver);
 		String username = dataFile("data.json","loginDetails",0,"username");
 		String password = dataFile("data.json","loginDetails",0,"password"); 
-		loginPage.username.sendKeys(username);
-		loginPage.password.sendKeys(password);
-		loginPage.loginBtn.click();		
+		
+		loginPage.username().sendKeys(username);
+		loginPage.password().sendKeys(password);
+		loginPage.loginBtn().click();		
+		Thread.sleep(3000);
 	}
 
 }

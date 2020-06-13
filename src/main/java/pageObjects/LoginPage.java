@@ -1,23 +1,37 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LoginPage extends BasePageObject{
 	
-	@FindBy(name = "uid")
-	public WebElement username;
-	
-	@FindBy(name = "password")
-	public WebElement password;
-	
-	@FindBy(name = "btnLogin")
-	public WebElement loginBtn;
 	
 	public LoginPage(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		super(driver);
 	}
+
+
+	public WebElement username() {
+		By path = By.name("uid");
+		return buildElement(path);
+	}
+	
+	
+	public WebElement password() {
+		By path = By.name("password");
+		return buildElement(path);
+	}
+	
+
+	public WebElement loginBtn() {
+		By path = By.name("btnLogin");
+		return buildElement(path);
+	}
+	
+	
+	
+	
+	
 
 }
