@@ -3,8 +3,6 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class DashboardPage extends BasePageObject{
 	
@@ -24,8 +22,7 @@ public class DashboardPage extends BasePageObject{
 	
 	public WebElement editCustomerBtn() {
 		By path = By.linkText("Edit Customer");
-		return buildElement(path);
-		
+		return buildElement(path);		
 	}
 	
 	public WebElement editAccountBtn() {
@@ -35,7 +32,6 @@ public class DashboardPage extends BasePageObject{
 	public WebElement depositBtn() {
 		By path = By.xpath("//a[text()='Deposit']/..");
 		return buildElement(path);
-
 	}
 	
 	public WebElement iframe() {

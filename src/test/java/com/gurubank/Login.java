@@ -19,7 +19,6 @@ public class Login extends TestBase{
 		loginPage.username().sendKeys(username);
 		loginPage.password().sendKeys(password);
 		loginPage.loginBtn().click();		
-		Thread.sleep(3000);
 	}
 
 }

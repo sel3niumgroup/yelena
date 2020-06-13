@@ -13,14 +13,12 @@ public class AccountPage extends BasePageObject{
     public WebElement customerId() {
 		By path = By.name("cusid");
 		return buildElement(path);
-	}
-	
+	}	
 
 	public WebElement accountType() {
 		By path = By.name("selaccount");
 		return buildElement(path);
 	}
-	
 	
 	public WebElement initialDeposit() {
 		By path = By.name("inideposit");
@@ -30,7 +28,6 @@ public class AccountPage extends BasePageObject{
 	public WebElement submit() {
 		By path = By.name("button2");
 		return buildElement(path);
-	}
-	
+	}	
 
 }

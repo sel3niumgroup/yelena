@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 
 public class CustomerPage extends BasePageObject{
 
-
 	public CustomerPage(WebDriver driver) {
 		super(driver);
 	}
@@ -66,9 +65,7 @@ public class CustomerPage extends BasePageObject{
 	public WebElement submit() {
 		By path = By.name("sub");
 		return buildElement(path);
-	}
-	
-	
+	}	
 	
 	public void enterDOB(String year, String month, String day) {
 		this.dateOfBirth().clear();
@@ -79,5 +76,4 @@ public class CustomerPage extends BasePageObject{
 	}
 	
 }
-
 	

@@ -9,7 +9,7 @@ import pageObjects.DashboardPage;
 public class CreateNewCustomer extends Login{
 	
 	@Test(priority=2)
-	public void t002_Create_New_Customer_Account() throws InterruptedException {
+	public void t002_Create_New_Customer_Account() {
 		DashboardPage dashboardPage = new DashboardPage(driver);		 
 		
 		dashboardPage.newCustomerBtn().click();
@@ -25,7 +25,6 @@ public class CreateNewCustomer extends Login{
 		String  cxEmail = dataFile("data.json","CustomerDetails",0,"E-mail")+RandomUtils.nextInt(10000,99999)+"@gmail.com";
 		String  cxPassword = dataFile("data.json","CustomerDetails",0,"Password");
 		
-		Thread.sleep(3000);
 		CustomerPage customerPage = new CustomerPage (driver);
 		customerPage.customerName().sendKeys(cxName);
 		customerPage.gender(cxGender).click();
@@ -38,7 +37,6 @@ public class CreateNewCustomer extends Login{
 		customerPage.email().sendKeys(cxEmail);
 		customerPage.password().sendKeys (cxPassword);
 		customerPage.submit().click();
-		Thread.sleep(3000);
 	}
 
 }

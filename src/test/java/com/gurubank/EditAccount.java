@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 
 import pageObjects.DashboardPage;
 import pageObjects.EditAccountPage;
-import pageObjects.EditCustomerPage;
 
 public class EditAccount extends Login{
 	@Test(priority=2)
