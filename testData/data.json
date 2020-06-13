@@ -12,14 +12,37 @@
 	}],
 	"CustomerDetails": [{
 		"CustomerName": "John Smith",
-		"Gender": "Male",
-		"DateofBirth": "10-18-1983",
+		"Gender": "f",
+		"DateofBirth": "18-03-1968",
 		"Address": "1235 Ave Parker",
 		"City": "New York",
 		"State": "New York",
 		"PIN": "123456",
 		"MobileNumber": "4539875624",
-		"E-mail": "jsmith@gmail.com",
+		"E-mail": "jsmith",
 		"Password": "Canada01"
-	}]
+	}],
+
+	"AddNewAccountForm": [{
+		"CustomerId": "75940",
+		"AccountType": "Savings",
+		"InitialDeposit": "1325"
+	}],
+	
+	"EditCustomerForm": [{
+	"CustomerId": "75940"
+	
+	}],
+	
+	"EditAccountForm": [{
+	"AccountNo": "79889"
+	}],
+	
+	"AmountDepositForm": [{
+	"AccountNo":"79889",
+	"Amount":"100",
+	"Description":"Study"
+	 }]
+	
+	
 }
