@@ -42,6 +42,20 @@
 	"AccountNo":"79889",
 	"Amount":"100",
 	"Description":"Study"
+	 }],
+	 
+	"AmountWithdrawalForm": [{
+	"AccountNo":"79889",
+	"Amount":"150",
+	"Description":"Food"
+	 }],
+	 
+	 
+	 "FundTransfer":  [{
+	 "PayersAccountNo":"79889",
+	 "PayeesAccountNo":"80296",
+	 "Amount":"150",
+	 "Description":"Rent"
 	 }]
 	
 	
