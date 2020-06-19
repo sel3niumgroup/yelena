@@ -4,8 +4,8 @@
 	}],
 
 	"loginDetails": [{
-		"username": "mngr262954",
-		"password": "YjYqybu"
+		"username": "mngr267064",
+		"password": "AsAjEdA"
 	}, {
 		"username": "mngr262954",
 		"password": "xyzabc"
@@ -56,7 +56,10 @@
 	 "PayeesAccountNo":"80296",
 	 "Amount":"150",
 	 "Description":"Rent"
+	 }],
+	 
+	 "BalanceEnquiryForm": [{
+	 "AccountNo":"79889"
 	 }]
-	
 	
 }

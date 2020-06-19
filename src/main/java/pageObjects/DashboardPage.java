@@ -44,7 +44,10 @@ public class DashboardPage extends BasePageObject {
 		By path = By.xpath("//a[text()='Fund Transfer']/..");
 		return buildElement(path);
 	}
-
+	public WebElement balanceEnquirylBtn() {
+		By path = By.xpath("//a[text()='Balance Enquiry']/..");
+		return buildElement(path);
+	}
 	public WebElement iframe() {
 		By path = By.id("flow_close_btn_iframe");
 		return buildElement(path);
