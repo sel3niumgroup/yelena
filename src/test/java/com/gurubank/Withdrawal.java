@@ -21,14 +21,14 @@ public class Withdrawal extends Login {
 
 		dashboardPage.withdrawalBtn().click();
 
-		String cxaccountNoWithdrawal = dataFile("data.json", "AmountWithdrawalForm", 0, "AccountNo");
-		String cxamountWithdrawal = dataFile("data.json", "AmountWithdrawalForm", 0, "Amount");
-		String cxdescriptionWithdrawal = dataFile("data.json", "AmountWithdrawalForm", 0, "Description");
+		String cxAccountNoWithdrawal = dataFile("data.json", "AmountWithdrawalForm", 0, "AccountNo");
+		String cxAmountWithdrawal = dataFile("data.json", "AmountWithdrawalForm", 0, "Amount");
+		String cxDescriptionWithdrawal = dataFile("data.json", "AmountWithdrawalForm", 0, "Description");
 
 		WithdrawalPage withdrawalPage = new WithdrawalPage(driver);
-		withdrawalPage.accountNo().sendKeys(cxaccountNoWithdrawal);
-		withdrawalPage.amount().sendKeys(cxamountWithdrawal);
-		withdrawalPage.description().sendKeys(cxdescriptionWithdrawal);
+		withdrawalPage.accountNo().sendKeys(cxAccountNoWithdrawal);
+		withdrawalPage.amount().sendKeys(cxAmountWithdrawal);
+		withdrawalPage.description().sendKeys(cxDescriptionWithdrawal);
 
 		withdrawalPage.submit().click();
 	}

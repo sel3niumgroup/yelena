@@ -12,19 +12,20 @@ public class BalanceEnquiry extends Login {
 	@Test(priority = 2)
 	public void t002_BalanceEnquiry() throws InterruptedException {
 		DashboardPage dashboardPage = new DashboardPage(driver);
-		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(dashboardPage.newCustomerBtn()));
 		dashboardPage.newCustomerBtn().click();
-		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("flow_close_btn_iframe"));
 		dashboardPage.closeAdBtn().click();
 		driver.switchTo().defaultContent();
-
+		
 		dashboardPage.balanceEnquirylBtn().click();
 
-		String cxaccount = dataFile("data.json", "BalanceEnquiryForm", 0, "AccountNo");
+		String cxAccount = dataFile("data.json", "BalanceEnquiryForm", 0, "AccountNo");
 		
 		BalanceEnquiryPage balanceEnquiryPage = new BalanceEnquiryPage(driver);
-		balanceEnquiryPage.accountNo().sendKeys(cxaccount);
+		balanceEnquiryPage.accountNo().sendKeys(cxAccount);
 			
 		balanceEnquiryPage.submit().click();
 	}
