@@ -33,7 +33,11 @@ public class FundTransferPage extends BasePageObject {
 	public WebElement submit() {
 		By path = By.name("AccSubmit");
 		return buildElement(path);
-
+	}
+	
+	public WebElement continueBtn() {
+		By path = By.xpath("//table//a[text()='Continue']");
+		return buildElement(path);
 	}
 
 }

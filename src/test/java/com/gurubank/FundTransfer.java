@@ -1,7 +1,5 @@
 package com.gurubank;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -35,13 +33,8 @@ public class FundTransfer extends Login {
 		fundTransferPage.payeesaccountNo().sendKeys(cxPayeesAccountNo);
 		fundTransferPage.amount().sendKeys(cxAmount);
 		fundTransferPage.description().sendKeys(cxDescription);
-
-	
-		String actualMsg = driver.findElement(
-				By.xpath("//table/tbody/tr[1]/td[1]")).getText();
-		String fundTransferSuccessMsg ="Transfer Successfull";
-		Assert.assertEquals(actualMsg,fundTransferSuccessMsg);
+		fundTransferPage.submit().click();	
 		
-		fundTransferPage.submit().click();
+		Assert.assertEquals(fundTransferPage.continueBtn().isDisplayed(), true);	
 	}
 }
