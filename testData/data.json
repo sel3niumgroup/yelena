@@ -4,8 +4,8 @@
 	}],
 
 	"loginDetails": [{
-		"username": "mngr262954",
-		"password": "YjYqybu"
+		"username": "mngr267064",
+		"password": "AsAjEdA"
 	}, {
 		"username": "mngr262954",
 		"password": "xyzabc"
@@ -24,25 +24,42 @@
 	}],
 
 	"AddNewAccountForm": [{
-		"CustomerId": "75940",
+		"CustomerId": "99612",
 		"AccountType": "Savings",
 		"InitialDeposit": "1325"
 	}],
 	
 	"EditCustomerForm": [{
-	"CustomerId": "75940"
+	"CustomerId": "99612"
 	
 	}],
 	
 	"EditAccountForm": [{
-	"AccountNo": "79889"
+	"AccountNo": "80529"
 	}],
 	
 	"AmountDepositForm": [{
-	"AccountNo":"79889",
+	"AccountNo":"80529",
 	"Amount":"100",
 	"Description":"Study"
+	 }],
+	 
+	"AmountWithdrawalForm": [{
+	"AccountNo":"80529",
+	"Amount":"150",
+	"Description":"Food"
+	 }],
+	 
+	 
+	 "FundTransfer":  [{
+	 "PayersAccountNo":"80529",
+	 "PayeesAccountNo":"80531",
+	 "Amount":"150",
+	 "Description":"Rent"
+	 }],
+	 
+	 "BalanceEnquiryForm": [{
+	 "AccountNo":"80529"
 	 }]
-	
 	
 }
